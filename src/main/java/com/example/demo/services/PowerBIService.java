@@ -78,6 +78,8 @@ public class PowerBIService {
 		
 		HttpHeaders responseHeader = response.getHeaders();
 		String responseBody = response.getBody();
+//		logger.info("responseBody details");
+//		logger.info(responseBody);
 		
 		// Create embedding configuration object
 		EmbedConfig reportEmbedConfig = new EmbedConfig();

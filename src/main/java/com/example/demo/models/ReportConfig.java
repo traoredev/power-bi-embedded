@@ -17,12 +17,14 @@ import org.slf4j.LoggerFactory;
 public class ReportConfig {
 	static final Logger logger = LoggerFactory.getLogger(EmbedController.class);
 	
-	public String reportId = "";
+	public String id = "";
 
 	public String embedUrl = "";
 	
-	public String reportName = "";
-	
+	public String name = "";
+
+	public  String reportType = "";
+
 	public Boolean isEffectiveIdentityRolesRequired = false;
 
 	public Boolean isEffectiveIdentityRequired = false;
@@ -36,9 +38,10 @@ public class ReportConfig {
 	public JSONObject getJSONObject() {
 		JSONObject jsonObj = new JSONObject();
 		try {
-			jsonObj.put("reportId", reportId);
+			jsonObj.put("reportId", id);
 			jsonObj.put("embedUrl", embedUrl);
-			jsonObj.put("reportName", reportName);
+			jsonObj.put("reportName", name);
+			jsonObj.put("reportType", reportType);
 		} catch (JSONException e) {
             logger.error("DefaultListItem.toString JSONException: {}", e.getMessage());
 		}

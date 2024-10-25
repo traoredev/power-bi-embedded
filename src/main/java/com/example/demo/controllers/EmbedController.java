@@ -22,12 +22,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.HttpClientErrorException;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.net.MalformedURLException;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 @Controller
+@CrossOrigin(origins = "*") // Allows requests from all origins
 public class EmbedController {
 
 	static final Logger logger = LoggerFactory.getLogger(EmbedController.class);
